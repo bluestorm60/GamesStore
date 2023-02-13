@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B993330299AFFA0004FB801 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99332F299AFFA0004FB801 /* NetworkService.swift */; };
+		2B993332299B008B004FB801 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993331299B008B004FB801 /* DataTransferService.swift */; };
+		2B993334299B00C7004FB801 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993333299B00C7004FB801 /* Endpoint.swift */; };
+		2B993336299B00DF004FB801 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993335299B00DF004FB801 /* NetworkConfig.swift */; };
+		2B993338299B02B1004FB801 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993337299B02B1004FB801 /* Cancelable.swift */; };
+		2B99333A299B02BF004FB801 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993339299B02BF004FB801 /* ConnectionError.swift */; };
+		2B99333B299B02F2004FB801 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993339299B02BF004FB801 /* ConnectionError.swift */; };
+		2B99333C299B02F2004FB801 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993337299B02B1004FB801 /* Cancelable.swift */; };
+		2B99333D299B0300004FB801 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993335299B00DF004FB801 /* NetworkConfig.swift */; };
+		2B99333E299B0300004FB801 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993333299B00C7004FB801 /* Endpoint.swift */; };
+		2B99333F299B0300004FB801 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993331299B008B004FB801 /* DataTransferService.swift */; };
+		2B993340299B0300004FB801 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99332F299AFFA0004FB801 /* NetworkService.swift */; };
 		2B9BCF11299AE412000186AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BCF10299AE412000186AB /* AppDelegate.swift */; };
 		2B9BCF13299AE412000186AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BCF12299AE412000186AB /* SceneDelegate.swift */; };
 		2B9BCF15299AE412000186AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BCF14299AE412000186AB /* ViewController.swift */; };
@@ -37,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B99332F299AFFA0004FB801 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2B993331299B008B004FB801 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		2B993333299B00C7004FB801 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2B993335299B00DF004FB801 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		2B993337299B02B1004FB801 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
+		2B993339299B02BF004FB801 /* ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
 		2B9BCF0D299AE412000186AB /* GamesStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9BCF10299AE412000186AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B9BCF12299AE412000186AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +235,10 @@
 		2B99332B299AFDD9004FB801 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2B99332F299AFFA0004FB801 /* NetworkService.swift */,
+				2B993331299B008B004FB801 /* DataTransferService.swift */,
+				2B993333299B00C7004FB801 /* Endpoint.swift */,
+				2B993335299B00DF004FB801 /* NetworkConfig.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -224,6 +246,8 @@
 		2B99332C299AFDE7004FB801 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2B993337299B02B1004FB801 /* Cancelable.swift */,
+				2B993339299B02BF004FB801 /* ConnectionError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -429,9 +453,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B993334299B00C7004FB801 /* Endpoint.swift in Sources */,
+				2B993332299B008B004FB801 /* DataTransferService.swift in Sources */,
+				2B993330299AFFA0004FB801 /* NetworkService.swift in Sources */,
 				2B9BCF15299AE412000186AB /* ViewController.swift in Sources */,
 				2B9BCF1B299AE412000186AB /* GamesStore.xcdatamodeld in Sources */,
 				2B9BCF11299AE412000186AB /* AppDelegate.swift in Sources */,
+				2B993336299B00DF004FB801 /* NetworkConfig.swift in Sources */,
+				2B993338299B02B1004FB801 /* Cancelable.swift in Sources */,
+				2B99333A299B02BF004FB801 /* ConnectionError.swift in Sources */,
 				2B9BCF13299AE412000186AB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +470,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B99333F299B0300004FB801 /* DataTransferService.swift in Sources */,
+				2B99333B299B02F2004FB801 /* ConnectionError.swift in Sources */,
+				2B99333C299B02F2004FB801 /* Cancelable.swift in Sources */,
+				2B99333D299B0300004FB801 /* NetworkConfig.swift in Sources */,
 				2B9BCF2B299AE414000186AB /* GamesStoreTests.swift in Sources */,
+				2B99333E299B0300004FB801 /* Endpoint.swift in Sources */,
+				2B993340299B0300004FB801 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,7 +646,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GamesStore/Info.plist;
+				INFOPLIST_FILE = GamesStore/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -638,7 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GamesStore/Info.plist;
+				INFOPLIST_FILE = GamesStore/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
