@@ -78,6 +78,173 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B99331A299AEA3C004FB801 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2B9BCF12299AE412000186AB /* SceneDelegate.swift */,
+				2B9BCF10299AE412000186AB /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2B99331B299AEA4F004FB801 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2B99331C299AEA6A004FB801 /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2B99331C299AEA6A004FB801 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B99331E299AEA89004FB801 /* Protocols */,
+				2B99331D299AEA7A004FB801 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2B99331D299AEA7A004FB801 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B99331E299AEA89004FB801 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2B99331F299AEAA6004FB801 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2B993322299AEF46004FB801 /* Interfaces */,
+				2B993321299AEF1B004FB801 /* UseCase */,
+				2B993320299AEF0F004FB801 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2B993320299AEF0F004FB801 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2B993321299AEF1B004FB801 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2B993322299AEF46004FB801 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				2B993323299AEF51004FB801 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		2B993323299AEF51004FB801 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2B993324299AEF75004FB801 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2B993329299AFDBB004FB801 /* PersistentStorages */,
+				2B993327299AFD97004FB801 /* Network */,
+				2B993326299AFD67004FB801 /* Utils */,
+				2B993325299AEF88004FB801 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2B993325299AEF88004FB801 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2B993326299AFD67004FB801 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2B993327299AFD97004FB801 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2B993328299AFDA6004FB801 /* DataMapping */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2B993328299AFDA6004FB801 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		2B993329299AFDBB004FB801 /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				2B99332E299AFE82004FB801 /* CoreDataStorage */,
+				2B9BCF19299AE412000186AB /* GamesStore.xcdatamodeld */,
+			);
+			path = PersistentStorages;
+			sourceTree = "<group>";
+		};
+		2B99332A299AFDCB004FB801 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				2B99332B299AFDD9004FB801 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		2B99332B299AFDD9004FB801 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2B99332C299AFDE7004FB801 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2B99332D299AFDF0004FB801 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B9BCF1E299AE413000186AB /* LaunchScreen.storyboard */,
+				2B9BCF21299AE413000186AB /* Info.plist */,
+				2B9BCF1C299AE413000186AB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B99332E299AFE82004FB801 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
 		2B9BCF04299AE412000186AB = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +268,15 @@
 		2B9BCF0F299AE412000186AB /* GamesStore */ = {
 			isa = PBXGroup;
 			children = (
-				2B9BCF10299AE412000186AB /* AppDelegate.swift */,
-				2B9BCF12299AE412000186AB /* SceneDelegate.swift */,
+				2B99332D299AFDF0004FB801 /* Resources */,
+				2B99332C299AFDE7004FB801 /* Common */,
+				2B99332A299AFDCB004FB801 /* Infrastructure */,
+				2B993324299AEF75004FB801 /* Data */,
+				2B99331F299AEAA6004FB801 /* Domain */,
+				2B99331B299AEA4F004FB801 /* Presentation */,
+				2B99331A299AEA3C004FB801 /* Application */,
 				2B9BCF14299AE412000186AB /* ViewController.swift */,
 				2B9BCF16299AE412000186AB /* Main.storyboard */,
-				2B9BCF1C299AE413000186AB /* Assets.xcassets */,
-				2B9BCF1E299AE413000186AB /* LaunchScreen.storyboard */,
-				2B9BCF21299AE413000186AB /* Info.plist */,
-				2B9BCF19299AE412000186AB /* GamesStore.xcdatamodeld */,
 			);
 			path = GamesStore;
 			sourceTree = "<group>";
