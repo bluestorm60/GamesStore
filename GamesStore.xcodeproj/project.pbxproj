@@ -19,6 +19,7 @@
 		2B99333E299B0300004FB801 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993333299B00C7004FB801 /* Endpoint.swift */; };
 		2B99333F299B0300004FB801 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993331299B008B004FB801 /* DataTransferService.swift */; };
 		2B993340299B0300004FB801 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99332F299AFFA0004FB801 /* NetworkService.swift */; };
+		2B993342299B0578004FB801 /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993341299B0578004FB801 /* AppConfigurations.swift */; };
 		2B9BCF11299AE412000186AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BCF10299AE412000186AB /* AppDelegate.swift */; };
 		2B9BCF13299AE412000186AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BCF12299AE412000186AB /* SceneDelegate.swift */; };
 		2B9BCF15299AE412000186AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BCF14299AE412000186AB /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		2B993335299B00DF004FB801 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		2B993337299B02B1004FB801 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
 		2B993339299B02BF004FB801 /* ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
+		2B993341299B0578004FB801 /* AppConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
 		2B9BCF0D299AE412000186AB /* GamesStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9BCF10299AE412000186AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B9BCF12299AE412000186AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				2B9BCF12299AE412000186AB /* SceneDelegate.swift */,
 				2B9BCF10299AE412000186AB /* AppDelegate.swift */,
+				2B993341299B0578004FB801 /* AppConfigurations.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -292,13 +295,13 @@
 		2B9BCF0F299AE412000186AB /* GamesStore */ = {
 			isa = PBXGroup;
 			children = (
-				2B99332D299AFDF0004FB801 /* Resources */,
-				2B99332C299AFDE7004FB801 /* Common */,
-				2B99332A299AFDCB004FB801 /* Infrastructure */,
-				2B993324299AEF75004FB801 /* Data */,
-				2B99331F299AEAA6004FB801 /* Domain */,
-				2B99331B299AEA4F004FB801 /* Presentation */,
 				2B99331A299AEA3C004FB801 /* Application */,
+				2B99331B299AEA4F004FB801 /* Presentation */,
+				2B99331F299AEAA6004FB801 /* Domain */,
+				2B993324299AEF75004FB801 /* Data */,
+				2B99332A299AFDCB004FB801 /* Infrastructure */,
+				2B99332C299AFDE7004FB801 /* Common */,
+				2B99332D299AFDF0004FB801 /* Resources */,
 				2B9BCF14299AE412000186AB /* ViewController.swift */,
 				2B9BCF16299AE412000186AB /* Main.storyboard */,
 			);
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B993342299B0578004FB801 /* AppConfigurations.swift in Sources */,
 				2B993334299B00C7004FB801 /* Endpoint.swift in Sources */,
 				2B993332299B008B004FB801 /* DataTransferService.swift in Sources */,
 				2B993330299AFFA0004FB801 /* NetworkService.swift in Sources */,
@@ -641,6 +645,8 @@
 		2B9BCF3B299AE414000186AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "https://api.rawg.io";
+				API_KEY = bf908926a1e1402b9fea0271c572ab7e;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -669,6 +675,8 @@
 		2B9BCF3C299AE414000186AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "https://api.rawg.io";
+				API_KEY = bf908926a1e1402b9fea0271c572ab7e;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
