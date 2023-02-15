@@ -5,11 +5,11 @@
     </entity>
     <entity name="GameResponseEntity" representedClassName="GameResponseEntity" syncable="YES" codeGenerationType="class">
         <attribute name="backgroundImage" optional="YES" attributeType="String"/>
+        <attribute name="genres" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="metaCritic" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="gamesResponse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GamesResponseEntity" inverseName="games" inverseEntity="GamesResponseEntity"/>
-        <relationship name="genres" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GameResponseEntity" inverseName="genres" inverseEntity="GameResponseEntity"/>
     </entity>
     <entity name="GamesRequestEntity" representedClassName="GamesRequestEntity" syncable="YES" codeGenerationType="class">
         <attribute name="page" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
@@ -19,6 +19,7 @@
     </entity>
     <entity name="GamesResponseEntity" representedClassName="GamesResponseEntity" syncable="YES" codeGenerationType="class">
         <attribute name="nextPage" optional="YES" attributeType="String"/>
+        <attribute name="page" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="games" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GameResponseEntity" inverseName="gamesResponse" inverseEntity="GameResponseEntity"/>
         <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GamesRequestEntity" inverseName="response" inverseEntity="GamesRequestEntity"/>
     </entity>
