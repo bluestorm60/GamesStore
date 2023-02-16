@@ -13,7 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let container = AppDIContainer()
-        let repo = DefaultGamesRepository(dataTransferService: container.apiDataTransferService, cache: CoreDataGamesResponseStorage())
+        let cache = CoreDataGamesResponseStorage()
+        let repo = DefaultGamesRepository(dataTransferService: container.apiDataTransferService, cache: cache)
         let useCase = DefaultSearchGamesUseCase(gamesRepository: repo)
         useCase.execute(requestValue: SearchGamesUseCaseRequestValue(query: GameQuery(query: "gtav"), page: 1, pageSize: 10)) { result in
             print(result)
