@@ -10,7 +10,6 @@ import UIKit
 class GamesListViewController: UIViewController, Alertable {
     //MARK: - Properties
     private var viewModel: GamesListViewModel!
-    private var posterImagesRepository: PosterImagesRepository?
 
     //MARK: - Outlets
     @IBOutlet weak var searchBar: UISearchBar!
@@ -25,10 +24,9 @@ class GamesListViewController: UIViewController, Alertable {
 
     
     //MARK: - Initialization
-    init(viewModel: GamesListViewModel, posterImagesRepository: PosterImagesRepository) {
+    init(viewModel: GamesListViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
-        self.posterImagesRepository = posterImagesRepository
         title = "Games"
     }
     
@@ -125,7 +123,7 @@ extension GamesListViewController: UICollectionViewDataSource, UICollectionViewD
             return UICollectionViewCell()
         }
 
-        cell.fill(with: viewModel.items.value[indexPath.row],posterImagesRepository: posterImagesRepository)
+        cell.fill(with: viewModel.items.value[indexPath.row])
 
         if indexPath.row == viewModel.items.value.count - 1 {
             viewModel.didLoadNextPage()

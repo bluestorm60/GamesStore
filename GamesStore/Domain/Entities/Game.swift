@@ -22,3 +22,10 @@ struct GamesPage: Equatable {
     let count: Int
     let games: [Game]
 }
+
+
+extension Game {
+    func toData() -> GamesResponseDTO.GameDTO{
+        return .init(id: Int(id)!, name: title, genres: genres?.components(separatedBy: ",").map({GamesResponseDTO.GameDTO.GenerDTO(name: $0)}) ?? [], metaCritic: metaCritic, backgroundImage: image)
+    }
+}

@@ -20,14 +20,13 @@ class GamesListItemCell: UICollectionViewCell {
     @IBOutlet weak var metaCriticsValueLbl: UILabel!
     
     private var viewModel: GamesListItemViewModel!
-    private var posterImagesRepository: PosterImagesRepository?
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    func fill(with viewModel: GamesListItemViewModel, posterImagesRepository: PosterImagesRepository?) {
+    func fill(with viewModel: GamesListItemViewModel) {
         self.viewModel = viewModel
         gameTitleLbl.text = viewModel.title
         genersLbl.text = viewModel.genres

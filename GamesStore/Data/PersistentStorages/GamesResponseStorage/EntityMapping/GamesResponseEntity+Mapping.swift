@@ -14,6 +14,12 @@ extension GamesResponseEntity {
     }
 }
 
+extension GameFavouritesEntity {
+    func toDTO() -> GamesResponseDTO.GameDTO {
+        let gernes = genres?.components(separatedBy: ",").map({GamesResponseDTO.GameDTO.GenerDTO(name: $0)})
+        return .init(id: Int(id), name: title, genres: gernes ?? [], metaCritic: Int(metaCritic), backgroundImage: backgroundImage)
+    }
+}
 extension GameResponseEntity {
     func toDTO() -> GamesResponseDTO.GameDTO {
         let gernes = genres?.components(separatedBy: ",").map({GamesResponseDTO.GameDTO.GenerDTO(name: $0)})
@@ -46,6 +52,18 @@ extension GamesResponseDTO {
 extension GamesResponseDTO.GameDTO {
     func toEntity(in context: NSManagedObjectContext) -> GameResponseEntity {
         let entity: GameResponseEntity = .init(context: context)
+        entity.id = Int64(id)
+        entity.title = name
+        entity.backgroundImage = backgroundImage
+        if let metaCritic = metaCritic {
+            entity.metaCritic = Int32(metaCritic)
+        }
+        entity.genres = genres.map({$0.name}).joined(separator: ",")
+        return entity
+    }
+    
+    func toEntityFavourite(in context: NSManagedObjectContext) -> GameFavouritesEntity{
+        let entity: GameFavouritesEntity = .init(context: context)
         entity.id = Int64(id)
         entity.title = name
         entity.backgroundImage = backgroundImage

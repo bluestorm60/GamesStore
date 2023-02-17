@@ -21,7 +21,7 @@ class GamesListCoordinator: GamesListBaseCoordinator {
         let repo = DefaultGamesRepository(dataTransferService: container.apiDataTransferService, cache: cache)
         let useCase = DefaultSearchGamesUseCase(gamesRepository: repo)
         let viewModel = DefaultGamesListViewModel(searchGamesUseCase: useCase, coordinator: self)
-        rootViewController = UINavigationController(rootViewController: GamesListViewController(viewModel: viewModel,posterImagesRepository: DefaultPosterImagesRepository()))
+        rootViewController = UINavigationController(rootViewController: GamesListViewController(viewModel: viewModel))
         return rootViewController
     }
     
