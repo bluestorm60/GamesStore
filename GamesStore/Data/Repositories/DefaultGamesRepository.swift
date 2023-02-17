@@ -26,18 +26,19 @@ extension DefaultGamesRepository: GamesRepository {
         cache.getResponse(for: requestDTO) { result in
             if case let .success(responseDTO?) = result {
                 cached((responseDTO.toDomain(page: requestDTO.page)))
+            }else{
+                guard !task.isCancelled else {return}
+                let endPoint = APIEndpoints.getGames(with: requestDTO)
+                task.networkTask = self.dataTransferService.request(with: endPoint, completion: { result in
+                    switch result {
+                    case .failure(let error):
+                        completion(.failure(error))
+                    case .success(let responseDTO):
+                        self.cache.save(response: responseDTO, for: requestDTO)
+                        completion(.success(responseDTO.toDomain(page: requestDTO.page)))
+                    }
+                })
             }
-            guard !task.isCancelled else {return}
-            let endPoint = APIEndpoints.getGames(with: requestDTO)
-            task.networkTask = self.dataTransferService.request(with: endPoint, completion: { result in
-                switch result {
-                case .failure(let error):
-                    completion(.failure(error))
-                case .success(let responseDTO):
-                    self.cache.save(response: responseDTO, for: requestDTO)
-                    completion(.success(responseDTO.toDomain(page: requestDTO.page)))
-                }
-            })
         }
         return task
     }

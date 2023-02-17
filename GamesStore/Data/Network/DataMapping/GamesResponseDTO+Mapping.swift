@@ -13,8 +13,10 @@ struct GamesResponseDTO: Decodable {
     private enum CodingKeys: String, CodingKey {
         case nextPage = "next"
         case games = "results"
+        case count
     }
     let nextPage: String?
+    let count: Int
     let games: [GameDTO]
 }
 
@@ -52,6 +54,7 @@ extension GamesResponseDTO {
     func toDomain(page: Int) -> GamesPage {
         return .init(page: page,
                      nextPage: nextPage,
+                     count: count,
                      games: games.map { $0.toDomain() })
     }
 }

@@ -16,7 +16,12 @@ class GamesListCoordinator: GamesListBaseCoordinator {
     var rootViewController: UIViewController = UIViewController()
     
     func start() -> UIViewController {
-        rootViewController = UINavigationController(rootViewController: GamesListViewController(coordinator: self))
+        let container = AppDIContainer()
+        let cache = CoreDataGamesResponseStorage()
+        let repo = DefaultGamesRepository(dataTransferService: container.apiDataTransferService, cache: cache)
+        let useCase = DefaultSearchGamesUseCase(gamesRepository: repo)
+        let viewModel = DefaultGamesListViewModel(searchGamesUseCase: useCase, coordinator: self)
+        rootViewController = UINavigationController(rootViewController: GamesListViewController(viewModel: viewModel,posterImagesRepository: DefaultPosterImagesRepository()))
         return rootViewController
     }
     

@@ -10,7 +10,7 @@ import CoreData
 
 extension GamesResponseEntity {
     func toDTO() -> GamesResponseDTO {
-        return .init(nextPage: nextPage, games: games?.allObjects.map {($0 as! GameResponseEntity).toDTO() } ?? [])
+        return .init(nextPage: nextPage,count: Int(count), games: games?.allObjects.map {($0 as! GameResponseEntity).toDTO() } ?? [])
     }
 }
 
@@ -35,6 +35,7 @@ extension GamesResponseDTO {
     func toEntity(in context: NSManagedObjectContext) -> GamesResponseEntity {
         let entity: GamesResponseEntity = .init(context: context)
         entity.nextPage = nextPage
+        entity.count = Int64(count)
         games.forEach {
             entity.addToGames($0.toEntity(in: context))
         }

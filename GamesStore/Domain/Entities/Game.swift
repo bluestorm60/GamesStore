@@ -19,5 +19,6 @@ struct Game: Equatable, Identifiable {
 struct GamesPage: Equatable {
     let page: Int
     let nextPage: String?
+    let count: Int
     let games: [Game]
 }
