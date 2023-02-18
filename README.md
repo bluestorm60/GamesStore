@@ -8,8 +8,8 @@ Games Store app that list console games from [rawg.io](https://rawg.io) and stor
 * ### iPhone:
 
 <p float="left" align="center">
-<img src="/screenshots/simulator_screenshot_375401F8-05D5-477D-9ED6-932EAA96752E.jpg" width="40%"/>
-<img src="/screenshots/simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817" width="40%"/>
+<img src="/screenshots/simulator_screenshot_78EA2134-3A73-4893-90F0-A6689067EBD3.png" width="40%"/>
+<img src="/screenshots/simulator_screenshot_B98ABEDA-783E-4049-866A-00E91E6B18FB.png" width="40%"/>
 </p>
 
 * ### iPad:
@@ -22,25 +22,21 @@ Games Store app that list console games from [rawg.io](https://rawg.io) and stor
 
 ## Features
 
-- [x] Modularization
 - [x] Persistence
 - [x] Pagination
-- [x] Material Design
-- [x] Support for Tablets
+- [x] Support for iPad
 - [x] Rotation Support
-- [ ] Unit / UI Testing (Partial)
+- [ ] Unit / UI Testing
 
 ## Need to know
 
-- The app is offline first and I used `RemoteMediator` from `Paging` library with `Room` to help achieving SSOT (Single Source of Truth).
-- Used clean architecture with MVVM to achieve code separation, easy testing, maintainable code and more. Also MVVM have a huge support from Google
-  and the community.
+- Used clean architecture with MVVM to achieve code separation, easy testing, maintainable code and more.
 - What I liked the most in the task is:
     + Multi screens support, because it's nice to see an app that works on almost any screen device.
       the offline first feature.
 
 ## What to improve if I have time
-- Missing for Unit test as i didnot have time but i will do it later.
+- Missing for Unit test as i did not have time but i will do it later.
 - There's issues related to largeTitles when navigate to details screens.
 - The app is almost ready for the store, only a few bugs to fix if I have more time.
 

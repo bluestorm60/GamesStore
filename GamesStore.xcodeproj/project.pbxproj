@@ -135,6 +135,8 @@
 		2BE50A6829A177F500526176 /* simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A6229A177BC00526176 /* simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png */; };
 		2BE50A6A29A1780800526176 /* simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A6929A1780800526176 /* simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png */; };
 		2BE50A6F29A17B4C00526176 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A6E29A17B4B00526176 /* Config.swift */; };
+		2BE50A7129A1815300526176 /* simulator_screenshot_78EA2134-3A73-4893-90F0-A6689067EBD3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A7029A1815300526176 /* simulator_screenshot_78EA2134-3A73-4893-90F0-A6689067EBD3.png */; };
+		2BE50A7329A1815900526176 /* simulator_screenshot_B98ABEDA-783E-4049-866A-00E91E6B18FB.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A7229A1815900526176 /* simulator_screenshot_B98ABEDA-783E-4049-866A-00E91E6B18FB.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +235,8 @@
 		2BE50A6C29A1797A00526176 /* DebugConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugConfiguration.xcconfig; sourceTree = "<group>"; };
 		2BE50A6D29A17A1E00526176 /* ProductionConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProductionConfiguration.xcconfig; sourceTree = "<group>"; };
 		2BE50A6E29A17B4B00526176 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2BE50A7029A1815300526176 /* simulator_screenshot_78EA2134-3A73-4893-90F0-A6689067EBD3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_78EA2134-3A73-4893-90F0-A6689067EBD3.png"; sourceTree = "<group>"; };
+		2BE50A7229A1815900526176 /* simulator_screenshot_B98ABEDA-783E-4049-866A-00E91E6B18FB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_B98ABEDA-783E-4049-866A-00E91E6B18FB.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -697,6 +701,8 @@
 				2BE50A6229A177BC00526176 /* simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png */,
 				2BE50A6429A177ED00526176 /* simulator_screenshot_247CF45D-7EC5-4D6D-9090-C8C11DD1FC3C.png */,
 				2BE50A6929A1780800526176 /* simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png */,
+				2BE50A7029A1815300526176 /* simulator_screenshot_78EA2134-3A73-4893-90F0-A6689067EBD3.png */,
+				2BE50A7229A1815900526176 /* simulator_screenshot_B98ABEDA-783E-4049-866A-00E91E6B18FB.png */,
 			);
 			path = screenshots;
 			sourceTree = "<group>";
@@ -824,8 +830,10 @@
 				2B9BCF1D299AE413000186AB /* Assets.xcassets in Resources */,
 				2BD9F422299D9FDC00DD2651 /* FavViewController.xib in Resources */,
 				2BE50A6A29A1780800526176 /* simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png in Resources */,
+				2BE50A7129A1815300526176 /* simulator_screenshot_78EA2134-3A73-4893-90F0-A6689067EBD3.png in Resources */,
 				2BE50A4429A15C9D00526176 /* README.md in Resources */,
 				2BD9F428299D9FED00DD2651 /* GamesListViewController.xib in Resources */,
+				2BE50A7329A1815900526176 /* simulator_screenshot_B98ABEDA-783E-4049-866A-00E91E6B18FB.png in Resources */,
 				2BE50A6829A177F500526176 /* simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png in Resources */,
 				2B9BCF18299AE412000186AB /* Main.storyboard in Resources */,
 			);
