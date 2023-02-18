@@ -10,7 +10,7 @@ import UIKit
 class GameDetailsViewController: UIViewController, Alertable {
     //MARK: - Properties
     private var viewModel: GameDetailsViewModel!
-
+    private var favbuttonItem: UIBarButtonItem!
     
     //MARK: - Outlets
     @IBOutlet weak var gamePosterImgeView: UIImageView!
@@ -35,13 +35,26 @@ class GameDetailsViewController: UIViewController, Alertable {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         navigationController?.navigationBar.prefersLargeTitles = false
 
         bind()
+        viewModel.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.viewWillAppear()
+    }
+    private func setupViews(){
+        favbuttonItem = UIBarButtonItem(title: viewModel.favTitle, style: .plain, target: self, action: #selector(addToFav))
+        navigationItem.rightBarButtonItem = favbuttonItem
+    }
+    
+    private func updateViews(){
+        favbuttonItem.title = viewModel.favTitle
+    }
+    @objc func addToFav(){
+        viewModel.favouriteHandling()
     }
     private func bind() {
         viewModel.gameData.observe(on: self) { [weak self] gameData in
@@ -50,6 +63,11 @@ class GameDetailsViewController: UIViewController, Alertable {
         }
         viewModel.loading.observe(on: self) { [weak self] in self?.updateLoading($0) }
         viewModel.error.observe(on: self) { [weak self] in self?.showError($0) }
+        viewModel.isFav.observe(on: self) {[weak self] _  in
+            DispatchQueue.main.async {
+                self?.updateViews()
+            }
+        }
     }
     
     private func updateGameData(_ gameData: GameDetails) {

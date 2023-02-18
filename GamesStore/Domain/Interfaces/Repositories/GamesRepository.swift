@@ -11,8 +11,4 @@ protocol GamesRepository {
     func fetchGamesList(query: GameQuery, page: Int,pageSize: Int,
                          cached: @escaping (GamesPage) -> Void,
                          completion: @escaping (Result<GamesPage, Error>) -> Void) -> Cancellable?
-//    func fetchGameDetails(id: GameDetailsRequest,
-//                         cached: @escaping (GameDetails) -> Void,
-//                         completion: @escaping (Result<GameDetails, Error>) -> Void) -> Cancellable?
-
 }

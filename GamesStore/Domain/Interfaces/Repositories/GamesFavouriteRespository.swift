@@ -8,12 +8,8 @@
 import Foundation
 
 protocol GamesFavouriteRespository {
-    @discardableResult
     func fetchFavouriteGamesList(cached: @escaping ([Game]) -> Void)
-    func saveFavouriteGame(game: Game)
-    func removeFavouriteGame(game:Game)
-//    func fetchGameDetails(id: GameDetailsRequest,
-//                         cached: @escaping (GameDetails) -> Void,
-//                         completion: @escaping (Result<GameDetails, Error>) -> Void) -> Cancellable?
-
+    func saveFavouriteGame(game: Game, completion: ((Error?) -> Void)?)
+    func removeFavouriteGame(game:Game, completion: ((Error?) -> Void)?)
+    func isFavourited(game:Game,cached: @escaping (Bool) -> Void)
 }

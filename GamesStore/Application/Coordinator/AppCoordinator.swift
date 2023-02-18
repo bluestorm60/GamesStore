@@ -32,7 +32,9 @@ final class AppCoordinator: MainCoordinator{
 
         
         gameFavNav?.tabBarItem = UITabBarItem(title: "Favourites", image: UIImage(named: "favUnSelected_ic"),selectedImage: UIImage(named: "favSelected_ic"))
-        
+        (rootViewController as? UITabBarController)?.tabBar.backgroundColor = UIColor.white
+        (rootViewController as? UITabBarController)?.tabBar.layer.borderWidth = 0.50
+        (rootViewController as? UITabBarController)?.tabBar.layer.borderColor = UIColor.lightGray.cgColor
         (rootViewController as? UITabBarController)?.viewControllers = [gameCoordinator.navigationController!,gameFavCoordinator.navigationController!]
     }
     

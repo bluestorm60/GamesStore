@@ -20,14 +20,14 @@ final class GamesDetailsCoordinator: GameDetailsBaseCoordinator{
         self.game = game
         self.navigationController = navigationController
     }
-
+    
     func start() {
-                let container = AppDIContainer()
-                let repo = DefaultGameDetailsRepository(dataTransferService: container.apiDataTransferService)
-                let useCase = DefaultGameDetailsUseCase(gamesRepository: repo)
-                    let viewModel = DefaultGameDetailsViewModel(gameDetailsUseCase: useCase, game: game, coordinator: self)
-                    rootViewController = GameDetailsViewController(viewModel: viewModel)
-
+        let container = AppDIContainer()
+        let repo = DefaultGameDetailsRepository(dataTransferService: container.apiDataTransferService, cache: CoreDataFavouriteGamesResponseStorage())
+        let useCase = DefaultGameDetailsUseCase(gamesRepository: repo)
+        let viewModel = DefaultGameDetailsViewModel(gameDetailsUseCase: useCase, game: game, coordinator: self)
+        rootViewController = GameDetailsViewController(viewModel: viewModel)
+        
         self.navigationController?.pushViewController(rootViewController!, animated: true)
     }
     

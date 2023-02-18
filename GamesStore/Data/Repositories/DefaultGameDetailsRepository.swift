@@ -10,13 +10,31 @@ import Foundation
 final class DefaultGameDetailsRepository {
 
     private let dataTransferService: DataTransferService
+    private let cache: GamesFavouriteStorage
 
-    init(dataTransferService: DataTransferService) {
+
+    init(dataTransferService: DataTransferService, cache: GamesFavouriteStorage) {
         self.dataTransferService = dataTransferService
+        self.cache = cache
     }
 }
 
 extension DefaultGameDetailsRepository: GameDetailsRepository{
+    func saveFavouriteGame(game: Game, completion: ((Error?) -> Void)?) {
+        cache.save(response: game.toData(),completion: completion)
+    }
+    
+    func removeFavouriteGame(game: Game, completion: ((Error?) -> Void)?) {
+        cache.delete(response: game.toData(),completion: completion)
+    }
+    
+    func isFavourited(game: Game, cached: @escaping (Bool) -> Void) {
+        cache.isFavourited(game: game.toData()) { isFav in
+            cached(isFav)
+        }
+    }
+    
+    
     func getGameDetails(gameID: Int, completion: @escaping (Result<GameDetails, Error>) -> Void) -> Cancellable? {
         let task = RepositoryTask()
         

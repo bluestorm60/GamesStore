@@ -17,6 +17,12 @@ final class DefaultFavouriteGamesRepository {
 }
 
 extension DefaultFavouriteGamesRepository: GamesFavouriteRespository {
+    func isFavourited(game:Game,cached: @escaping (Bool) -> Void){
+        cache.isFavourited(game: game.toData()) { result in
+            cached(result)
+        }
+    }
+
     func fetchFavouriteGamesList(cached: @escaping ([Game]) -> Void){
         cache.getFavourites { result in
             if case let .success(responseDTO) = result {
@@ -29,12 +35,12 @@ extension DefaultFavouriteGamesRepository: GamesFavouriteRespository {
         }
     }
     
-    func saveFavouriteGame(game: Game) {
-        cache.save(response: game.toData())
+    func saveFavouriteGame(game: Game, completion: ((Error?) -> Void)?) {
+        cache.save(response: game.toData(),completion: completion)
     }
     
-    func removeFavouriteGame(game: Game) {
-        cache.delete(response: game.toData())
+    func removeFavouriteGame(game: Game, completion: ((Error?) -> Void)?) {
+        cache.delete(response: game.toData(),completion: completion)
     }
     
 }

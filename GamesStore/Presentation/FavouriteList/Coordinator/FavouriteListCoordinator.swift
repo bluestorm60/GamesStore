@@ -13,7 +13,10 @@ final class GamesFavouriteCoordinator: GameBaseCoordinator{
     var rootViewController: UIViewController?
     
     func start() {
-        rootViewController = FavViewController(coordinator: self)
+        let repo = DefaultFavouriteGamesRepository(cache: CoreDataFavouriteGamesResponseStorage())
+        let useCase = DefaultFavouriteGamesUseCase(favouriteRepo: repo)
+        let viewModel = DefaultFavouriteListViewModel(coordinator: self, useCase: useCase)
+        rootViewController = FavViewController(viewModel: viewModel)
 
         navigationController = UINavigationController(rootViewController: rootViewController!)
         navigationController?.navigationItem.largeTitleDisplayMode = .always

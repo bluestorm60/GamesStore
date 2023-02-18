@@ -13,6 +13,7 @@ enum GameDetailsViewModelLoading {
 protocol GameDetailsViewModelInput {
     func viewDidLoad()
     func viewWillAppear()
+    func favouriteHandling()
 }
 
 protocol GameDetailsViewModelOutput {
@@ -21,11 +22,14 @@ protocol GameDetailsViewModelOutput {
     var error: Observable<String> { get }
     var screenTitle: String { get }
     var errorTitle: String { get }
+    var isFav: Observable<Bool> {get}
+    var favTitle: String { get }
 
 }
 protocol GameDetailsViewModel: GameDetailsViewModelInput, GameDetailsViewModelOutput {}
 
 final class DefaultGameDetailsViewModel: GameDetailsViewModel {
+    
     private let gameDetailsUseCase: GameDetailsUseCase
     private var coordinator: GameDetailsBaseCoordinator?
 
@@ -39,6 +43,9 @@ final class DefaultGameDetailsViewModel: GameDetailsViewModel {
     let error: Observable<String> = Observable("")
     var screenTitle = ""
     let errorTitle = "Error"
+    
+    var favTitle: String = "Favourite"
+    var isFav: Observable<Bool> = Observable(false)
 
     init(gameDetailsUseCase: GameDetailsUseCase, game: Game,coordinator: GameDetailsBaseCoordinator? = nil) {
         self.gameDetailsUseCase = gameDetailsUseCase
@@ -61,6 +68,32 @@ final class DefaultGameDetailsViewModel: GameDetailsViewModel {
         })
     }
     
+    private func checkIsFavourite(){
+        gameDetailsUseCase.isFavourited(game: self.game) {[weak self] isFav in
+            guard let self = self else {return}
+            self.favTitle = isFav ? "Favourited" : "Favourite"
+            self.isFav.value = isFav
+        }
+    }
+    
+    private func addToFavouriteRequest(){
+        gameDetailsUseCase.saveFavouriteGame(game: self.game) {[weak self] error in
+            guard let self = self else {return}
+            if error == nil{
+                self.favTitle = "Favourited"
+                self.isFav.value = true
+            }
+        }
+    }
+    private func removeFavouriteRequest(){
+        gameDetailsUseCase.removeFavouriteGame(game: self.game) {[weak self] error in
+            guard let self = self else {return}
+            if error == nil{
+                self.favTitle = "Favourite"
+                self.isFav.value = false
+            }
+        }
+    }
     private func handle(error: Error) {
         self.error.value = error.isInternetConnectionError ? "No internet connection" : "Failed loading game details"
     }
@@ -69,8 +102,17 @@ final class DefaultGameDetailsViewModel: GameDetailsViewModel {
 }
 
 extension DefaultGameDetailsViewModel{
+    func favouriteHandling(){
+        if isFav.value{
+            removeFavouriteRequest()
+        }else{
+            addToFavouriteRequest()
+        }
+    }
+    
+
     func viewDidLoad() {
-        
+        checkIsFavourite()
     }
     
     func viewWillAppear() {
