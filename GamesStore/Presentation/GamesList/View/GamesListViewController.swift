@@ -141,40 +141,14 @@ extension GamesListViewController: UICollectionViewDataSource, UICollectionViewD
             guard let self = self else {return}
             self.viewModel.didSelectItem(at: indexPath.row)
         }
-
         return cell
-
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let width = UIScreen.main.bounds.size.width
-//        return CGSize(width: width, height: width * 0.362666666666667)
-        if UIDevice.current.orientation.isLandscape {
-            let width = (view.frame.height - 10.0) / 3
-            return CGSize(width: width, height: width * 0.362666666666667)
-        } else {
-            let width = view.frame.width
-            return CGSize(width: width, height: width * 0.362666666666667)
-        }
-
+        let width = view.frame.width
+        return CGSize(width: width, height: width * 0.362666666666667)
     }
     
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        if UIDevice.current.orientation.isLandscape,
-            let layout = searchCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            let width = (view.frame.height - 10.0) / 3
-            layout.itemSize = CGSize(width: width, height: width * 0.362666666666667)
-            layout.minimumInteritemSpacing = 10.0
-            layout.invalidateLayout()
-        } else if UIDevice.current.orientation.isPortrait,
-            let layout = searchCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            let width = view.frame.width
-            layout.itemSize = CGSize(width: width, height: width * 0.362666666666667)
-            layout.minimumInteritemSpacing = 0.0
-            layout.minimumLineSpacing = 0.0
-            layout.invalidateLayout()
-        }
-    }
 }
 
 
