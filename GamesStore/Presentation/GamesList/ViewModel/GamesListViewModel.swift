@@ -42,7 +42,7 @@ final class DefaultGamesListViewModel: GamesListViewModel{
     private let pageSize = 10
     private var pages: [GamesPage] = []
     private var gamesLoadTask: Cancellable? { willSet { gamesLoadTask?.cancel() } }
-    private var coordinator: GamesListBaseCoordinator?
+    private var coordinator: GameBaseCoordinator?
 
     // MARK: - OUTPUT
     
@@ -51,14 +51,14 @@ final class DefaultGamesListViewModel: GamesListViewModel{
     let query: Observable<String> = Observable("")
     let error: Observable<String> = Observable("")
     var isEmpty: Bool { return items.value.isEmpty }
-    let screenTitle = NSLocalizedString("Games", comment: "")
-    let emptyDataTitle = NSLocalizedString("Search results", comment: "")
-    let errorTitle = NSLocalizedString("Error", comment: "")
-    let searchBarPlaceholder = NSLocalizedString("Search Games", comment: "")
+    let screenTitle = "Games"
+    let emptyDataTitle = "Search results"
+    let errorTitle = "Error"
+    let searchBarPlaceholder = "Search Games"
     
     // MARK: - Init
     
-    init(searchGamesUseCase: SearchGamesUseCase, coordinator: GamesListBaseCoordinator) {
+    init(searchGamesUseCase: SearchGamesUseCase, coordinator: GameBaseCoordinator) {
         self.searchGamesUseCase = searchGamesUseCase
         self.coordinator = coordinator
     }
@@ -103,9 +103,7 @@ final class DefaultGamesListViewModel: GamesListViewModel{
     }
     
     private func handle(error: Error) {
-        self.error.value = error.isInternetConnectionError ?
-        NSLocalizedString("No internet connection", comment: "") :
-        NSLocalizedString("Failed loading movies", comment: "")
+        self.error.value = error.isInternetConnectionError ? "No internet connection" : "Failed loading movies"
     }
     
     private func update(gameQuery: GameQuery) {
@@ -138,6 +136,8 @@ extension DefaultGamesListViewModel {
     
     
     func didSelectItem(at index: Int) {
+        coordinator?.openDetails(game: pages.games[index])
+//        coordinator.move
 //        actions?.showGameDetails(pages.games[index])
     }
 }

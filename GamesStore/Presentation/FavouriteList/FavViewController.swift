@@ -8,9 +8,9 @@
 import UIKit
 
 class FavViewController: UIViewController {
-    var coordinator: FavouriteListBaseCoordinator?
+    var coordinator: GameBaseCoordinator?
 
-    init(coordinator: FavouriteListBaseCoordinator) {
+    init(coordinator: GameBaseCoordinator) {
         super.init(nibName: nil, bundle: nil)
         self.coordinator = coordinator
         title = "Favourites"
@@ -21,7 +21,6 @@ class FavViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
     }
 

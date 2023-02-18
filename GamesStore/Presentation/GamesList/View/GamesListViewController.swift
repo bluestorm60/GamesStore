@@ -27,7 +27,7 @@ class GamesListViewController: UIViewController, Alertable {
     init(viewModel: GamesListViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
-        title = "Games"
+        title = viewModel.screenTitle
     }
     
     required init?(coder: NSCoder) {
@@ -37,7 +37,6 @@ class GamesListViewController: UIViewController, Alertable {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
         bind()
         setupViews()
         setupSearchController()
@@ -128,10 +127,15 @@ extension GamesListViewController: UICollectionViewDataSource, UICollectionViewD
         if indexPath.row == viewModel.items.value.count - 1 {
             viewModel.didLoadNextPage()
         }
+        cell.itemClicked = { [weak self] in
+            guard let self = self else {return}
+            self.viewModel.didSelectItem(at: indexPath.row)
+        }
 
         return cell
 
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        let width = UIScreen.main.bounds.size.width
 //        return CGSize(width: width, height: width * 0.362666666666667)
@@ -145,9 +149,6 @@ extension GamesListViewController: UICollectionViewDataSource, UICollectionViewD
 
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.didSelectItem(at: indexPath.row)
-    }
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape,
             let layout = searchCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {

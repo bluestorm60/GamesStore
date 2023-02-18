@@ -16,9 +16,10 @@ struct APIEndpoints {
                         queryParametersEncodable: gamesRequestDTO)
     }
 
-    static func getGamePoster() -> Endpoint<Data> {
-        return Endpoint(path: "",
-                        method: .get,
-                        responseDecoder: RawDataResponseDecoder())
+    static func getGameDetails(with gameID: Int) -> Endpoint<GameDetailsResponseDTO> {
+
+        return Endpoint(path: "api/games/\(gameID)",
+                        method: .get)
     }
+
 }
