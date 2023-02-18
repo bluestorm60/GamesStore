@@ -43,9 +43,4 @@ extension DefaultGamesRepository: GamesRepository {
         return task
     }
     
-//    func fetchGameDetails(id: GameDetailsRequest, cached: @escaping (GameDetails) -> Void, completion: @escaping (Result<GameDetails, Error>) -> Void) -> Cancellable? {
-//        
-//    }
-    
-
 }

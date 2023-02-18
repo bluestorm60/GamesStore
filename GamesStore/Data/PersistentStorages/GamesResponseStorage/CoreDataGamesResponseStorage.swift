@@ -65,7 +65,7 @@ extension CoreDataGamesResponseStorage: GamesResponseStorage {
                 try context.save()
             } catch {
                 // TODO: - Log to Crashlytics
-                debugPrint("CoreDataMoviesResponseStorage Unresolved error \(error), \((error as NSError).userInfo)")
+                debugPrint("CoreDataGamesResponseStorage Unresolved error \(error), \((error as NSError).userInfo)")
             }
         }
     }

@@ -124,6 +124,17 @@
 		2BE50A3A29A141DB00526176 /* FavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A3629A141DB00526176 /* FavouriteTableViewCell.xib */; };
 		2BE50A4029A1583400526176 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A3E29A1583400526176 /* UITextView+Extensions.swift */; };
 		2BE50A4129A1583400526176 /* ReadMoreTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A3F29A1583400526176 /* ReadMoreTextView.swift */; };
+		2BE50A4429A15C9D00526176 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A4329A15C9D00526176 /* README.md */; };
+		2BE50A4A29A1641400526176 /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B993341299B0578004FB801 /* AppConfigurations.swift */; };
+		2BE50A4B29A1645200526176 /* GamesStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BCF19299AE412000186AB /* GamesStore.xcdatamodeld */; };
+		2BE50A4C29A1646700526176 /* FavouriteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A2E29A136A700526176 /* FavouriteListViewModel.swift */; };
+		2BE50A4E29A1648D00526176 /* ReadMoreTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A3F29A1583400526176 /* ReadMoreTextView.swift */; };
+		2BE50A4F29A1649000526176 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A3E29A1583400526176 /* UITextView+Extensions.swift */; };
+		2BE50A6629A177F200526176 /* simulator_screenshot_247CF45D-7EC5-4D6D-9090-C8C11DD1FC3C.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A6429A177ED00526176 /* simulator_screenshot_247CF45D-7EC5-4D6D-9090-C8C11DD1FC3C.png */; };
+		2BE50A6729A177F500526176 /* simulator_screenshot_375401F8-05D5-477D-9ED6-932EAA96752E.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A6029A177A600526176 /* simulator_screenshot_375401F8-05D5-477D-9ED6-932EAA96752E.png */; };
+		2BE50A6829A177F500526176 /* simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A6229A177BC00526176 /* simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png */; };
+		2BE50A6A29A1780800526176 /* simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A6929A1780800526176 /* simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png */; };
+		2BE50A6F29A17B4C00526176 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A6E29A17B4B00526176 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +225,14 @@
 		2BE50A3629A141DB00526176 /* FavouriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteTableViewCell.xib; sourceTree = "<group>"; };
 		2BE50A3E29A1583400526176 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		2BE50A3F29A1583400526176 /* ReadMoreTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadMoreTextView.swift; sourceTree = "<group>"; };
+		2BE50A4329A15C9D00526176 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };
+		2BE50A6029A177A600526176 /* simulator_screenshot_375401F8-05D5-477D-9ED6-932EAA96752E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_375401F8-05D5-477D-9ED6-932EAA96752E.png"; sourceTree = "<group>"; };
+		2BE50A6229A177BC00526176 /* simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png"; sourceTree = "<group>"; };
+		2BE50A6429A177ED00526176 /* simulator_screenshot_247CF45D-7EC5-4D6D-9090-C8C11DD1FC3C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_247CF45D-7EC5-4D6D-9090-C8C11DD1FC3C.png"; sourceTree = "<group>"; };
+		2BE50A6929A1780800526176 /* simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png"; sourceTree = "<group>"; };
+		2BE50A6C29A1797A00526176 /* DebugConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugConfiguration.xcconfig; sourceTree = "<group>"; };
+		2BE50A6D29A17A1E00526176 /* ProductionConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProductionConfiguration.xcconfig; sourceTree = "<group>"; };
+		2BE50A6E29A17B4B00526176 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,6 +449,7 @@
 		2B99332D299AFDF0004FB801 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2BE50A6B29A1796400526176 /* Configurations */,
 				2B9BCF16299AE412000186AB /* Main.storyboard */,
 				2B9BCF1E299AE413000186AB /* LaunchScreen.storyboard */,
 				2B9BCF21299AE413000186AB /* Info.plist */,
@@ -449,6 +469,8 @@
 		2B9BCF04299AE412000186AB = {
 			isa = PBXGroup;
 			children = (
+				2BE50A4329A15C9D00526176 /* README.md */,
+				2BE50A5F29A1778600526176 /* screenshots */,
 				2B9BCF0F299AE412000186AB /* GamesStore */,
 				2B9BCF29299AE414000186AB /* GamesStoreTests */,
 				2B9BCF33299AE414000186AB /* GamesStoreUITests */,
@@ -668,6 +690,27 @@
 			path = Externals;
 			sourceTree = "<group>";
 		};
+		2BE50A5F29A1778600526176 /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				2BE50A6029A177A600526176 /* simulator_screenshot_375401F8-05D5-477D-9ED6-932EAA96752E.png */,
+				2BE50A6229A177BC00526176 /* simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png */,
+				2BE50A6429A177ED00526176 /* simulator_screenshot_247CF45D-7EC5-4D6D-9090-C8C11DD1FC3C.png */,
+				2BE50A6929A1780800526176 /* simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png */,
+			);
+			path = screenshots;
+			sourceTree = "<group>";
+		};
+		2BE50A6B29A1796400526176 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				2BE50A6E29A17B4B00526176 /* Config.swift */,
+				2BE50A6C29A1797A00526176 /* DebugConfiguration.xcconfig */,
+				2BE50A6D29A17A1E00526176 /* ProductionConfiguration.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -773,12 +816,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCF0249299EA01B00BAEF6B /* GamesListItemCell.xib in Resources */,
+				2BE50A6729A177F500526176 /* simulator_screenshot_375401F8-05D5-477D-9ED6-932EAA96752E.png in Resources */,
+				2BE50A6629A177F200526176 /* simulator_screenshot_247CF45D-7EC5-4D6D-9090-C8C11DD1FC3C.png in Resources */,
 				2BC5ADFD29A044FF007A965E /* GameDetailsViewController.xib in Resources */,
 				2B9BCF20299AE413000186AB /* LaunchScreen.storyboard in Resources */,
 				2BE50A3929A141DB00526176 /* FavouriteTableViewCell.xib in Resources */,
 				2B9BCF1D299AE413000186AB /* Assets.xcassets in Resources */,
 				2BD9F422299D9FDC00DD2651 /* FavViewController.xib in Resources */,
+				2BE50A6A29A1780800526176 /* simulator_screenshot_0E182E76-D17F-462D-8E10-0161DA037149.png in Resources */,
+				2BE50A4429A15C9D00526176 /* README.md in Resources */,
 				2BD9F428299D9FED00DD2651 /* GamesListViewController.xib in Resources */,
+				2BE50A6829A177F500526176 /* simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817.png in Resources */,
 				2B9BCF18299AE412000186AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -846,6 +894,7 @@
 				2BAC1F0C299D7019000917F0 /* GamesResponseDTO+Mapping.swift in Sources */,
 				2BAC1F09299D6FB2000917F0 /* GamesRequestDTO+Mapping.swift in Sources */,
 				2BE50A2F29A136A700526176 /* FavouriteListViewModel.swift in Sources */,
+				2BE50A6F29A17B4C00526176 /* Config.swift in Sources */,
 				2BCF0255299EEE4F00BAEF6B /* Colors.swift in Sources */,
 				2BE50A4029A1583400526176 /* UITextView+Extensions.swift in Sources */,
 				2BE50A3729A141DB00526176 /* FavouriteTableViewCell.swift in Sources */,
@@ -880,13 +929,16 @@
 				2BAC1F0A299D6FB2000917F0 /* GamesRequestDTO+Mapping.swift in Sources */,
 				2BC5ADE8299FEFE0007A965E /* GamesFavouriteStorage.swift in Sources */,
 				2B99333F299B0300004FB801 /* DataTransferService.swift in Sources */,
+				2BE50A4E29A1648D00526176 /* ReadMoreTextView.swift in Sources */,
 				2BC5AE0B29A04802007A965E /* GameDetailsResponseDTO+Mapping.swift in Sources */,
 				2BC5ADEB29A03DB9007A965E /* GamesFavouriteRespository.swift in Sources */,
 				2BD9F408299D7D2900DD2651 /* GamesResponseEntity+Mapping.swift in Sources */,
+				2BE50A4B29A1645200526176 /* GamesStore.xcdatamodeld in Sources */,
 				2BAC1EFF299D6922000917F0 /* Game.swift in Sources */,
 				2BC5AE1229A053A2007A965E /* GameDetailsCoordinator.swift in Sources */,
 				2BD9F421299D9FDC00DD2651 /* FavViewController.swift in Sources */,
 				2BD9F40E299D828700DD2651 /* RepositoryTask.swift in Sources */,
+				2BE50A4A29A1641400526176 /* AppConfigurations.swift in Sources */,
 				2B99333B299B02F2004FB801 /* ConnectionError.swift in Sources */,
 				2BAC1EFC299D68E9000917F0 /* GameQuery.swift in Sources */,
 				2B99333C299B02F2004FB801 /* Cancelable.swift in Sources */,
@@ -903,6 +955,7 @@
 				2BAC1F10299D744A000917F0 /* GamesResponseStorage.swift in Sources */,
 				2BE50A3829A141DB00526176 /* FavouriteTableViewCell.swift in Sources */,
 				2BD9F43B299DA11200DD2651 /* FavouriteListCoordinator.swift in Sources */,
+				2BE50A4F29A1649000526176 /* UITextView+Extensions.swift in Sources */,
 				2BD9F418299D8BA800DD2651 /* AppDIContainer.swift in Sources */,
 				2BD9F411299D837000DD2651 /* APIEndpoints.swift in Sources */,
 				2BC5AE0229A04511007A965E /* GameDetailsViewModel.swift in Sources */,
@@ -915,6 +968,7 @@
 				2BCF0256299EEE4F00BAEF6B /* Colors.swift in Sources */,
 				2BC5AE0829A04668007A965E /* DefaultGameDetailsRepository.swift in Sources */,
 				2BD9F40B299D81CB00DD2651 /* DefaultGamesRepository.swift in Sources */,
+				2BE50A4C29A1646700526176 /* FavouriteListViewModel.swift in Sources */,
 				2BD9F427299D9FED00DD2651 /* GamesListViewController.swift in Sources */,
 				2B993340299B0300004FB801 /* NetworkService.swift in Sources */,
 				2BE50A2929A10A8200526176 /* AppCoordinator.swift in Sources */,
@@ -1081,8 +1135,8 @@
 		};
 		2B9BCF3B299AE414000186AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE50A6C29A1797A00526176 /* DebugConfiguration.xcconfig */;
 			buildSettings = {
-				API_BASE_URL = "https://api.rawg.io";
 				API_KEY = bf908926a1e1402b9fea0271c572ab7e;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1090,6 +1144,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GamesStore/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1101,7 +1156,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LA3EB.GamesStore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LA3EB.GamesStore.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1111,8 +1166,8 @@
 		};
 		2B9BCF3C299AE414000186AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE50A6D29A17A1E00526176 /* ProductionConfiguration.xcconfig */;
 			buildSettings = {
-				API_BASE_URL = "https://api.rawg.io";
 				API_KEY = bf908926a1e1402b9fea0271c572ab7e;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1120,6 +1175,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GamesStore/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

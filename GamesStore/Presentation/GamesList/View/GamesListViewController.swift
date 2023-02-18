@@ -77,8 +77,6 @@ class GamesListViewController: UIViewController, Alertable {
             searchCollectionView.isHidden = viewModel.isEmpty
             emptyDataLabel.isHidden = !viewModel.isEmpty
         }
-
-//        moviesTableViewController?.updateLoading(loading)
     }
     private func showError(_ error: String) {
         guard !error.isEmpty else { return }

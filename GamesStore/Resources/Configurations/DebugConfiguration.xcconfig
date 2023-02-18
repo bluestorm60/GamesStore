@@ -1,0 +1,17 @@
+//
+//  DebugConfiguration.xcconfig
+//  GamesStore
+//
+//  Created by Ahmed Shafik on 18/02/2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+ENVIRONMENT = DEVELOPMENT
+
+BUNDLE_DISPLAY_NAME = GamesStore-Dev
+PRODUCT_BUNDLE_IDENTIFIER = com.LA3EB.GamesStore.dev
+API_KEY = bf908926a1e1402b9fea0271c572ab7e
+BASE_URL = api.rawg.io
+

@@ -129,6 +129,11 @@
             <point key="canvasLocation" x="279" y="-46"/>
         </view>
     </objects>
+    <designables>
+        <designable name="B61-6u-yV6">
+            <size key="intrinsicContentSize" width="-1" height="33"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -26,7 +26,7 @@ final class CoreDataFavouriteGamesResponseStorage {
                                         requestDto.id as NSNumber)
         return request
     }
-
+    
     private func deleteResponse(response: GamesResponseDTO.GameDTO, in context: NSManagedObjectContext, completion: ((Error?) -> Void)? = nil) {
         let request = fetchRequest(for: response)
         
@@ -62,7 +62,7 @@ extension CoreDataFavouriteGamesResponseStorage: GamesFavouriteStorage{
                 cached(false)
             }
         }
-
+        
     }
     
     
@@ -98,7 +98,7 @@ extension CoreDataFavouriteGamesResponseStorage: GamesFavouriteStorage{
                 completion?(nil)
             } catch {
                 // TODO: - Log to Crashlytics
-                debugPrint("CoreDataMoviesResponseStorage Unresolved error \(error), \((error as NSError).userInfo)")
+                debugPrint("CoreDataGamesResponseStorage Unresolved error \(error), \((error as NSError).userInfo)")
                 completion?(error)
             }
         }

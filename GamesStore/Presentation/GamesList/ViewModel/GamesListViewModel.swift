@@ -104,7 +104,7 @@ final class DefaultGamesListViewModel: GamesListViewModel{
     }
     
     private func handle(error: Error) {
-        self.error.value = error.isInternetConnectionError ? "No internet connection" : "Failed loading movies"
+        self.error.value = error.isInternetConnectionError ? "No internet connection" : "Failed loading games"
     }
     
     private func update(gameQuery: GameQuery) {
