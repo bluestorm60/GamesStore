@@ -51,6 +51,7 @@ Games Store app that list console games from [rawg.io](https://rawg.io) and stor
 - The task was very good and challenging, made me to do some research to apply the best practices.
 - A side note, I estimated the task on the main features including pagination without the other bonus requirements but I figured that making most of
   bonus features will be good at the end and it takes more time.
+- Needs some enhancements for functions and class Marks.
 
 ## API Key
 
