@@ -17,14 +17,14 @@ class GameDetailsViewController: UIViewController, Alertable {
     @IBOutlet weak var gameTitleLbl: UILabel!
     @IBOutlet weak var gameDescriptionLbl: UILabel!
     
-
+    
     //MARK: - Initialization
     init(viewModel: GameDetailsViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
         title = ""
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -37,7 +37,7 @@ class GameDetailsViewController: UIViewController, Alertable {
         super.viewDidLoad()
         setupViews()
         navigationController?.navigationBar.prefersLargeTitles = false
-
+        
         bind()
         viewModel.viewDidLoad()
     }
@@ -90,14 +90,14 @@ class GameDetailsViewController: UIViewController, Alertable {
         guard !error.isEmpty else { return }
         showAlert(title: viewModel.errorTitle, message: error)
     }
-
+    
     private func openUrl(urlString: String?){
         if let urlString = urlString, let url = URL(string: urlString) {
             UIApplication.shared.open(url)
         }
     }
     @IBAction func visitRedditAction(_ sender: Any) {
-            self.openUrl(urlString: self.viewModel.gameData.value?.redditUrl)
+        self.openUrl(urlString: self.viewModel.gameData.value?.redditUrl)
     }
     @IBAction func visitWebsiteAction(_ sender: Any) {
         self.openUrl(urlString: self.viewModel.gameData.value?.gameWebSite)
@@ -117,7 +117,7 @@ extension String {
             return nil
         }
     }
-
+    
     public func convertHtmlToAttributedStringWithCSS(font: UIFont? , csscolor: String , lineheight: Int, csstextalign: String) -> NSAttributedString? {
         guard let font = font else {
             return convertHtmlToNSAttributedString

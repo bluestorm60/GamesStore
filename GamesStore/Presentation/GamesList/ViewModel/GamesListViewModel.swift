@@ -17,6 +17,7 @@ protocol GamesListViewModelInput {
     func didSearch(query: String)
     func didCancelSearch()
     func didSelectItem(at index: Int)
+    func clearSearch()
 }
 
 protocol GamesListViewModelOutput {
@@ -134,11 +135,11 @@ extension DefaultGamesListViewModel {
         gamesLoadTask?.cancel()
     }
     
-    
+    func clearSearch() {
+        self.resetPages()
+    }
     func didSelectItem(at index: Int) {
         coordinator?.openDetails(game: pages.games[index])
-//        coordinator.move
-//        actions?.showGameDetails(pages.games[index])
     }
 }
 

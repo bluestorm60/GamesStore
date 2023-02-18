@@ -99,8 +99,18 @@ extension GamesListViewController {
 }
 
 extension GamesListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count > 3 {
+            viewModel.didCancelSearch()
+            viewModel.didSearch(query: searchText)
+        }else{
+            viewModel.clearSearch()
+        }
+    }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
+        viewModel.clearSearch()
+        guard let searchText = searchBar.text, !searchText.isEmpty else {  return }
+        viewModel.didCancelSearch()
         viewModel.didSearch(query: searchText)
     }
 
@@ -166,3 +176,5 @@ extension GamesListViewController: UICollectionViewDataSource, UICollectionViewD
         }
     }
 }
+
+
