@@ -28,6 +28,12 @@ Games Store app that list console games from [rawg.io](https://rawg.io) and stor
 - [x] Rotation Support
 - [ ] Unit / UI Testing
 
+
+## Why MVVM
+
+- MVVM is an excellent design pattern, which reduces the amount of code on the Views and keeps the code clean, reusable, maintainable and testable.
+
+
 ## Need to know
 
 - Used clean architecture with MVVM to achieve code separation, easy testing, maintainable code and more.
