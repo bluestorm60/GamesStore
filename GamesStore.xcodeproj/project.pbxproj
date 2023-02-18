@@ -122,6 +122,8 @@
 		2BE50A3829A141DB00526176 /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A3529A141DB00526176 /* FavouriteTableViewCell.swift */; };
 		2BE50A3929A141DB00526176 /* FavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A3629A141DB00526176 /* FavouriteTableViewCell.xib */; };
 		2BE50A3A29A141DB00526176 /* FavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE50A3629A141DB00526176 /* FavouriteTableViewCell.xib */; };
+		2BE50A4029A1583400526176 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A3E29A1583400526176 /* UITextView+Extensions.swift */; };
+		2BE50A4129A1583400526176 /* ReadMoreTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE50A3F29A1583400526176 /* ReadMoreTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +212,8 @@
 		2BE50A3029A13F3000526176 /* FavouriteGamesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGamesUseCase.swift; sourceTree = "<group>"; };
 		2BE50A3529A141DB00526176 /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
 		2BE50A3629A141DB00526176 /* FavouriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteTableViewCell.xib; sourceTree = "<group>"; };
+		2BE50A3E29A1583400526176 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		2BE50A3F29A1583400526176 /* ReadMoreTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadMoreTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,7 @@
 		2B99331C299AEA6A004FB801 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2BE50A4229A1583D00526176 /* Externals */,
 				2B99331E299AEA89004FB801 /* Protocols */,
 				2B99331D299AEA7A004FB801 /* Extensions */,
 				2BCF0238299E787D00BAEF6B /* Observable.swift */,
@@ -654,6 +659,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		2BE50A4229A1583D00526176 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				2BE50A3F29A1583400526176 /* ReadMoreTextView.swift */,
+				2BE50A3E29A1583400526176 /* UITextView+Extensions.swift */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -815,6 +829,7 @@
 				2BD9F40A299D81CB00DD2651 /* DefaultGamesRepository.swift in Sources */,
 				2B993332299B008B004FB801 /* DataTransferService.swift in Sources */,
 				2B993330299AFFA0004FB801 /* NetworkService.swift in Sources */,
+				2BE50A4129A1583400526176 /* ReadMoreTextView.swift in Sources */,
 				2BCF023F299E802A00BAEF6B /* LoadingView.swift in Sources */,
 				2BCF0247299EA01B00BAEF6B /* GamesListItemCell.swift in Sources */,
 				2BCF0242299E813600BAEF6B /* Alertable.swift in Sources */,
@@ -832,6 +847,7 @@
 				2BAC1F09299D6FB2000917F0 /* GamesRequestDTO+Mapping.swift in Sources */,
 				2BE50A2F29A136A700526176 /* FavouriteListViewModel.swift in Sources */,
 				2BCF0255299EEE4F00BAEF6B /* Colors.swift in Sources */,
+				2BE50A4029A1583400526176 /* UITextView+Extensions.swift in Sources */,
 				2BE50A3729A141DB00526176 /* FavouriteTableViewCell.swift in Sources */,
 				2BAC1EFB299D68E9000917F0 /* GameQuery.swift in Sources */,
 				2BC5ADE4299FEEC7007A965E /* CoreDataFavouriteGamesResponseStorage.swift in Sources */,

@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameDetailsViewController" customModule="GamesStore" customModuleProvider="target">
             <connections>
-                <outlet property="gameDescriptionLbl" destination="tOO-3E-Ibx" id="QcJ-JJ-qjj"/>
+                <outlet property="gameDescriptionLbl" destination="B61-6u-yV6" id="c99-uJ-8DZ"/>
                 <outlet property="gamePosterImgeView" destination="1AJ-a5-WgQ" id="Tgf-ZY-DtB"/>
                 <outlet property="gameTitleLbl" destination="IpS-OZ-9UH" id="so3-nB-fad"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -24,14 +24,14 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1AJ-a5-WgQ">
                     <rect key="frame" x="0.0" y="59" width="393" height="305.33333333333331"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpS-OZ-9UH">
-                    <rect key="frame" x="16" y="305.33333333333331" width="361" height="43"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpS-OZ-9UH">
+                    <rect key="frame" x="16" y="348.33333333333331" width="361" height="0.0"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zVh-ds-rXF">
-                    <rect key="frame" x="16" y="380.33333333333331" width="361" height="40.333333333333314"/>
+                    <rect key="frame" x="16" y="380.33333333333331" width="361" height="61.333333333333314"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0n-rq-37h">
                             <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
@@ -39,16 +39,23 @@
                             <color key="textColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOO-3E-Ibx">
-                            <rect key="frame" x="0.0" y="28.333333333333371" width="361" height="12"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                            <color key="textColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B61-6u-yV6" customClass="ReadMoreTextView" customModule="GamesStore" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="28.333333333333371" width="361" height="33"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="maximumNumberOfLines">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="readMoreText" value="....Read More"/>
+                            </userDefinedRuntimeAttributes>
+                        </textView>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-bd-ysw">
-                    <rect key="frame" x="16" y="436.66666666666669" width="361" height="109.66666666666669"/>
+                    <rect key="frame" x="16" y="457.66666666666669" width="361" height="109.66666666666669"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLt-Jb-0AN">
                             <rect key="frame" x="0.0" y="0.0" width="361" height="0.66666666666666663"/>
@@ -72,14 +79,14 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arQ-hJ-c5I">
-                            <rect key="frame" x="0.0" y="54.666666666666629" width="361" height="0.3333333333333357"/>
+                            <rect key="frame" x="0.0" y="54.666666666666686" width="361" height="0.3333333333333357"/>
                             <color key="backgroundColor" white="0.0" alpha="0.25842368199999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="EJt-YH-yps"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wo9-1a-U7y">
-                            <rect key="frame" x="0.0" y="55" width="361" height="54"/>
+                            <rect key="frame" x="0.0" y="54.999999999999943" width="361" height="54"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Visit website">
@@ -123,6 +130,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

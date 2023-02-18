@@ -15,7 +15,7 @@ class GameDetailsViewController: UIViewController, Alertable {
     //MARK: - Outlets
     @IBOutlet weak var gamePosterImgeView: UIImageView!
     @IBOutlet weak var gameTitleLbl: UILabel!
-    @IBOutlet weak var gameDescriptionLbl: UILabel!
+    @IBOutlet weak var gameDescriptionLbl: ReadMoreTextView!
     
     
     //MARK: - Initialization
@@ -72,6 +72,15 @@ class GameDetailsViewController: UIViewController, Alertable {
     
     private func updateGameData(_ gameData: GameDetails) {
         gameDescriptionLbl.attributedText = gameData.gameDescription?.convertHtmlToNSAttributedString
+        
+        let readMoreTextAttributes: [NSAttributedString.Key: Any] = [
+             NSAttributedString.Key.foregroundColor: UIColor.systemBlue,
+             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
+           ]
+        gameDescriptionLbl.attributedReadMoreText = NSAttributedString(string: " ... Read more", attributes: readMoreTextAttributes)
+        gameDescriptionLbl.maximumNumberOfLines = 4
+        gameDescriptionLbl.shouldTrim = true
+        
         gameTitleLbl.text = gameData.title
         title = gameData.title
         if let imgeUrl = gameData.gameImge, let requestURL = URL(string: imgeUrl) {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavViewController: UIViewController {
+class FavViewController: UIViewController, Alertable {
     private var viewModel: FavouriteListViewModel!
     
     @IBOutlet weak var nodataLbl: UILabel!
@@ -75,7 +75,10 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate{
     }
     internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            viewModel.deleteItem(indexPath: indexPath.row)
+            showConfirmation(title: "Alert", actionTitle: "Delete", message: "Would you like to delete item from favourite list?", preferredStyle: .alert) {[weak self] _ in
+                guard let self = self else {return}
+                self.viewModel.deleteItem(indexPath: indexPath.row)
+            }
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
