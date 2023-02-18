@@ -5,14 +5,14 @@ Games Store app that list console games from [rawg.io](https://rawg.io) and stor
 
 ## Screenshots
 
-* ### Phone:
+* ### iPhone:
 
 <p float="left" align="center">
 <img src="/screenshots/simulator_screenshot_375401F8-05D5-477D-9ED6-932EAA96752E.jpg" width="40%"/>
 <img src="/screenshots/simulator_screenshot_4452BB2B-E3A7-472B-A37F-D6E38C361817" width="40%"/>
 </p>
 
-* ### Tablet:
+* ### iPad:
 
 <p float="left" align="center">
 <img src="/screenshots/simulator_screenshot_247CF45D-7EC5-4D6D-9090-C8C11DD1FC3C.png" width="45%"/>
@@ -52,7 +52,7 @@ Games Store app that list console games from [rawg.io](https://rawg.io) and stor
 
 ## API Key
 
-Get one from [rawg.io/apidocs](https://rawg.io/apidocs) and put it inside `local.properties` like this `API_KEY="api_key_here"`
+Get one from [rawg.io/apidocs](https://rawg.io/apidocs) and put it inside `Resources/DebugConfirguration and Resources/ProductionConfiguration` like this `API_KEY=api_key_here`
 
 ## Built With
 
